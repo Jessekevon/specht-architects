@@ -11,17 +11,15 @@
 ?>
 
 
-				<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- 				<footer id="colophon" class="site-footer" role="contentinfo">
 					<div class="wrap">
 						<p>Website by what.it.is</p>
 					</div>
-				</footer><!-- #colophon -->
-				
-</div><!-- #page -->
+				</footer>
+ -->				
 
 	<?php wp_footer(); ?>
-	<!--  
 	<script src="<?php echo get_template_directory_uri(); ?>/js/slick.js"></script>
-	-->
+	<script src="<?php echo get_template_directory_uri(); ?>/js/slider.js"></script>
 </body>
 </html>
