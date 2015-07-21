@@ -118,6 +118,109 @@ endif; // twentyfourteen_setup
 add_action( 'after_setup_theme', 'twentyfourteen_setup' );
 
 /**
+ * 
+ *
+ * ---------------  BEGIN CUSTOM POST TYPE FUNCTIONS
+ *
+ * 
+ */
+
+
+// Register Custom Post Type - Projects
+function work_post_type() {
+
+$labels = array(
+'name'                => _x( 'Work', 'Post Type General Name', 'text_domain' ),
+'singular_name'       => _x( 'Work', 'Post Type Singular Name', 'text_domain' ),
+'menu_name'           => __( 'Work', 'text_domain' ),
+'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+'all_items'           => __( 'All Projects', 'text_domain' ),
+'view_item'           => __( 'View Post', 'text_domain' ),
+'add_new_item'        => __( 'Add New Project', 'text_domain' ),
+'add_new'             => __( 'Add New', 'text_domain' ),
+'edit_item'           => __( 'Edit Post', 'text_domain' ),
+'update_item'         => __( 'Update Post', 'text_domain' ),
+'search_items'        => __( 'Search Projects', 'text_domain' ),
+'not_found'           => __( 'Not found', 'text_domain' ),
+'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+);
+$args = array(
+'label'               => __( 'work', 'text_domain' ),
+'description'         => __( 'Post Type Description', 'text_domain' ),
+'labels'              => $labels,
+'supports'            => array( 'title', 'thumbnail', 'revisions', 'editor' ),
+'taxonomies'          => array( 'post_tag' ),
+'hierarchical'        => false,
+'public'              => true,
+'show_ui'             => true,
+'show_in_menu'        => true,
+'show_in_nav_menus'   => true,
+'show_in_admin_bar'   => true,
+'menu_position'       => 4,
+'can_export'          => true,
+'has_archive'         => true,
+'exclude_from_search' => false,
+'publicly_queryable'  => true,
+'capability_type'     => 'post',
+);
+register_post_type( 'work', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'work_post_type', 0 );
+
+
+/**
+ * 
+ *
+ * ---------------  BEGIN CUSTOM TAXONOMIES FOR INDIVIDUAL POST TYPES
+ *
+ * 
+ */
+
+
+// Register Custom Taxonomy - PROJECT CATEGORIES
+function work_type() {
+
+$labels = array(
+'name'                       => _x( 'Work Categories', 'Taxonomy General Name', 'text_domain' ),
+'singular_name'              => _x( 'Work Category', 'Taxonomy Singular Name', 'text_domain' ),
+'menu_name'                  => __( 'Work Categories', 'text_domain' ),
+'all_items'                  => __( 'All Items', 'text_domain' ),
+'parent_item'                => __( 'Parent Item', 'text_domain' ),
+'parent_item_colon'          => __( 'Parent Item:', 'text_domain' ),
+'new_item_name'              => __( 'Category Name', 'text_domain' ),
+'add_new_item'               => __( 'Add New Project Category', 'text_domain' ),
+'edit_item'                  => __( 'Edit Item', 'text_domain' ),
+'update_item'                => __( 'Update Item', 'text_domain' ),
+'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+'search_items'               => __( 'Search Items', 'text_domain' ),
+'add_or_remove_items'        => __( 'Add or remove items', 'text_domain' ),
+'choose_from_most_used'      => __( 'Choose from the most used items', 'text_domain' ),
+'not_found'                  => __( 'Not Found', 'text_domain' ),
+);
+$args = array(
+'labels'                     => $labels,
+'hierarchical'               => true,
+'public'                     => true,
+'show_ui'                    => true,
+'show_admin_column'          => true,
+'show_in_nav_menus'          => true,
+'show_tagcloud'              => false,
+		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'editor' ),
+'rewrite'           => array( 'slug' => 'work_type' ),
+);
+register_taxonomy( 'taxonomy', array( 'work' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'work_type', 0 );
+
+
+
+/**
  * Adjust content_width value for image attachment template.
  *
  * @since Twenty Fourteen 1.0

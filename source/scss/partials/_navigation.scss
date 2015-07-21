@@ -1,32 +1,99 @@
-// Navigation
-//––––––––––––––––––––––––––––––––––––––––––––––––––
+// Navigation //––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@media (min-width: 768px) {
-	ul.nav-menu {
-		float: right;
-		margin-right: 45px;
-		margin-top: 70px;
-	}
+// Mobile Nav
 
-	ul.nav-menu {
-		li {
-			display: inline-block;
-			margin: 0 15px;
+////////////////
 
-			a {
-				color: $white;
-				font-size: 1.6rem;
-				font-weight: 400;
-			}
-		}
-	}
+// Above Mobile
+ @media (min-width: 768px) {
 
-	img.logo {
-		float: left;
-		width: 211px;
-		height: auto;
-		margin-left: 45px;
-		margin-top: 70px;
-	}
+    .header-main {
+        height: 130px;
+        display: block;
+        margin-bottom: 75px;
+    }
+
+    ul.nav-menu {
+        float: right;
+        margin-right: 45px;
+        margin-top: 66px;
+    }
+    ul.nav-menu {
+        li {
+            display: inline-block;
+            margin: 0 15px;
+            a {
+                color: $red;
+                font-size: 1.6rem;
+                font-weight: 400;
+                &:hover {
+                    color: $gray;
+                }
+            }
+        }
+
+        li.current_page_item {
+            a {
+                color: $gray;
+            }
+        }
+    }
+    svg {
+        float: left;
+        width: 211px;
+        height: auto;
+        margin-left: 45px;
+        margin-top: 66px;
+        path {
+            fill: $red;
+            @include global-transition;
+        }
+        &:hover {
+            path {
+                fill: $gray;
+                @include global-transition;
+            }
+        }
+    }
+    // Color Theme for Hompage + Other Full screen image pages 
+    .home {
+        .header-main {
+          height: auto;
+          display: inline;
+          margin-bottom: 0;
+        }
+        ul.nav-menu {
+            position: absolute;
+            top: 66px;
+            right: 45px;
+            z-index: 9999;
+            margin: 0 auto;
+        }
+        ul.nav-menu {
+            li {
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+        svg {
+            position: absolute;
+            z-index: 9999;
+            top: 66px;
+            left: 45px;
+            margin: 0 auto;
+            path {
+                fill: $white;
+            }
+            &:hover {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
 }
 

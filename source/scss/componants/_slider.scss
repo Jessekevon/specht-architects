@@ -15,23 +15,16 @@
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
     width: auto;
-    margin: 15px;
     height: 100%;
     text-align: center;
 
     @media (min-width: 768px) {
         margin: 0 auto;
-        width: 600px;
       }
 
       img {
         max-width: 100%;
         height: auto;
-      }
-
-      p {
-        color: $middle-grey;
-        margin-bottom: 8px;
       }
 }
 .slick-list {
@@ -40,6 +33,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    width: 100%;
 
     &:focus {
         outline: none;
@@ -106,15 +100,6 @@
     }
 }
 
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  @include vertical-align;
-}
 
 @charset "UTF-8";
 
@@ -137,124 +122,56 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Arrows */
 
-.slick-prev,
-.slick-next {
-    position: absolute;
-    display: block;
-    line-height: 0px;
-    font-size: 0px;
-    cursor: pointer;
-    top: 50%;
-    margin-top: -10px;
-    padding: 0;
-    border: none;
-    outline: none;
-    &.slick-disabled:before {
-        opacity: $slick-opacity-not-active;
-    }
-}
+// .slick-prev,
+// .slick-next {
+//     position: absolute;
+//     display: block;
+//     line-height: 0px;
+//     font-size: 0px;
+//     cursor: pointer;
+//     top: 50%;
+//     margin-top: -10px;
+//     padding: 0;
+//     border: none;
+//     outline: none;
+//     &.slick-disabled:before {
+//         opacity: $slick-opacity-not-active;
+//     }
+// }
 
-.slick-prev:before, .slick-next:before {
-    color: $slick-arrow-color;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+// .slick-prev:before, .slick-next:before {
+//     color: $slick-arrow-color;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
 
-.slick-prev {
-    left: -25%;
-    @include global-transition;
-    [dir="rtl"] & {
-        left: auto;
-        right: -25%;
-    }
-    &:before {
-        width: 40px;
-        content: " ";
-        background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/left1.png);
-        position: absolute;
-        height: 60px;
-        background-size: 40px;
-        }
-    &:hover {
-        opacity: $slick-opacity-default;
-        @include global-transition;
-    }    
-}
+// .left {
+//     &:before {
+//         width: 40px;
+//         content: " ";
+//         background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/left1.png);
+//         height: 60px;
+//         background-size: 40px;
+//         }
+//     &:hover {
+//         opacity: $slick-opacity-default;
+//         @include global-transition;
+//     }    
+// }
 
-.slick-next {
-    right: -25%;
-    @include global-transition;
-    [dir="rtl"] & {
-        left: -25%;
-        right: auto;
-    }
-    &:before {
-        width: 40px;
-        content: " ";
-        background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/right1.png);
-        position: absolute;
-        height: 60px;
-        background-size: 40px;
-    }
-    &:hover {
-        opacity: $slick-opacity-default;
-        @include global-transition;
-    }    
+// .right {
+//     &:before {
+//         width: 40px;
+//         content: " ";
+//         background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/right1.png);
+//         height: 60px;
+//         background-size: 40px;
+//     }
+//     &:hover {
+//         opacity: $slick-opacity-default;
+//         @include global-transition;
+//     }    
 
-}
-
-/* Dots */
-
-.slick-slider {
-    margin-bottom: 30px;
-}
-
-.image {
-  margin-bottom: 20px;
-  height: 300px;
-
-  @media (min-width: 550px) {
-    height: 500px;
-  }
-}
-
-.slider-info {
-    display: inline-block;
-
-    p {
-        font-size: 1.0rem;
-        display: inline-block;
-        margin-bottom: 0;
-    }
-}
-
-// Slider For Landing Page
-
-.landing {
-    .slick-slider {
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .slick-list {
-        height: 50vh;
-        width: 100%;
-        display: inline-block;
-        float: left;
-        top: 0;
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none; 
-        background-color: $light-grey;
-    }
-
-@media (min-width: 992px) {
-        .slick-list {
-          width: 50%;
-          height: 100vh;
-        }
-
-    }
-}
+// }
 
 

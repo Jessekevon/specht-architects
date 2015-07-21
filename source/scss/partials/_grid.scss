@@ -84,3 +84,7 @@ $susy: (
     @include container(1170px);
   }
 }
+
+.tabs-wrap {
+  @include container(750px);
+}

@@ -1,5 +1,9 @@
 // Home specific styles
 
 .landing-background-image {
-	height: 85vh;
+	height: 75vh;
+}
+
+.arrows, .description, .next-project {
+	@include span(4);
 }

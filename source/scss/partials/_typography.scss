@@ -37,6 +37,13 @@ p {
   @include global-transition;
 }
 
+// Add red color to specific tags
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// .red {
+//   color: $red;
+// }
+
 @media (min-width: 768px) {
   p {
     font-size: 1.3rem;
@@ -50,9 +57,9 @@ a {
   font-size: 1.3rem;
   text-decoration: none;
   color: $black;
+  @include global-transition;
   &:hover {
-    // @include link-border-bottom-hover;
-    // @include global-transition;
+    @include global-transition;
 
   }
 }

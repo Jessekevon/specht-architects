@@ -16,3 +16,11 @@
 	-moz-transition: .3s ease-in-out;
 	-webkit-transition: .3s ease-in-out;
 	}
+
+
+  @mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+  }
+

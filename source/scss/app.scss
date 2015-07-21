@@ -25,9 +25,14 @@ body {
   line-height: 1.6;
   font-weight: 300;
   font-family: $font-primary;
+  background-color: $white;
 }
 
  li {
   list-style: none;
+}
+
+.text-center {
+  text-align: center;
 }
 
