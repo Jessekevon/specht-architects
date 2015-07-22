@@ -13,12 +13,13 @@ get_header(); ?>
 
 	<div id="tabs">
 	  <ul class="tabs-nav">
-	    <li><a href="#tabs-1">Latest</a></li>
+	    <li class="selected"><a href="#tabs-1">Latest</a></li>
 	    <li><a href="/specht/ajax/commercial.html">Commercial</a></li>
 	    <li><a href="/specht/ajax/residential.html">Residential</a></li>
 	    <li><a href="/specht/ajax/hospitality.html">Hospitality</a></li>
 	    <li><a href="/specht/ajax/education.html">Education</a></li>
 	    <li><a href="/specht/ajax/experimental.html">Experimental</a></li>
+	    <li id="magic-line" style="left: 0px; width: 100px;"></li></ul>
 	  </ul>
 	  <div id="tabs-1">
 	    Latest
@@ -26,6 +27,9 @@ get_header(); ?>
 	</div>
 
 </div>
+
+
+
 
 <?php
 get_footer(); ?>
