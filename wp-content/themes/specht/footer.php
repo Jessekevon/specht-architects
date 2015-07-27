@@ -19,9 +19,12 @@
  -->				
 
 	<?php wp_footer(); ?>
+	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+	<script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/fade-in.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.14/slick.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/slider.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox.js"></script>
 </body>
 </html>

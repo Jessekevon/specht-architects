@@ -1,2 +1,46 @@
 // Single Post Body Content 
 //––––––––––––––––––––––––––––––––––––––––––––––––––
+.background-image {
+	height: 75vh;
+}
+
+.intro {
+  text-align: center;
+  position: relative;
+  padding: 40px;
+  @media (min-width: 768px) {
+    @include span(10);
+    @include push(1);
+    padding: 40px 0;
+  }
+  .intro-content {
+    color: $black;
+    h5 {
+      margin-top: 20px;
+      margin-bottom: 0;
+      @media (min-width: 768px) {
+        @include span(8);
+        @include push(2);
+      }
+    }
+  }
+}
+
+.secondary {
+  h1 {
+    @include flush;
+  }
+}
+
+.secondary-intro {
+  padding-top: 0;
+}
+
+.the-content {
+  margin-bottom: 40px;
+	@media (min-width: 768px) {
+	  @include span(8);
+	  @include push(2);
+	}
+
+}

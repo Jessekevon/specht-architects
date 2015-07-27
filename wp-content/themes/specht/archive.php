@@ -1,16 +1,6 @@
 <?php
 /**
- * The template for displaying Archive pages
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * If you'd like to further customize these archive views, you may create a
- * new template file for each specific one. For example, Twenty Fourteen
- * already has tag.php for Tag archives, category.php for Category archives,
- * and author.php for Author archives.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * Template Name: Work
  *
  * @package WordPress
  * @subpackage Twenty_Fourteen
@@ -19,56 +9,65 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+<div class="tabs-wrap">
 
-			<?php if ( have_posts() ) : ?>
+	<div id="tabs">
+	  <ul class="tabs-nav desktop">
+	    <li class="selected"><a href="#tabs-1">Latest</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
+	    <!-- <li id="magic-line" style="left: 0px; width: 100px;"></li -->
+	  </ul>
+<!-- 	  <ul class="tabs-nav mobile">
+	    <li class="selected"><a href="#tabs-1">Latest</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
+	  </ul>
+ -->
+	  <div id="tabs-1">
+	  	<?php
+	  	  $args = array(
+	  	    'post_type' => 'work',
+	  	    'posts_per_page' => 5,
+	  	    'orderby' => 'date',
+	  	    'order' => 'asc',
+	  	    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+	  	    );
+	  	  query_posts($args);
+	  	  while(have_posts()): the_post(); ?>
+	  	  <div class="col2 image-block">
+	  	      <a href="<?php the_permalink(); ?>">
+	  	        <div class="image-block-background-image-wrapper">
+	  	          <div class="image-block-background-image fadeIn" style="background: url('<?php echo $cfs->get('grid_item_featured_image'); ?>') no-repeat 50% 50%; background-size:cover">
+	  	          </div>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-						if ( is_day() ) :
-							printf( __( 'Daily Archives: %s', 'twentyfourteen' ), get_the_date() );
+	  	        </div>
+	  	    </a>
+	  	      <div class="image-block-content">
+	  	        <div class="image-block-content-inner">
+	  	          <p><?php the_title(); ?></p>
+	  	        </div>
+	  	      </div>
+	  	  </div>
+	  	  <?php endwhile;?>
 
-						elseif ( is_month() ) :
-							printf( __( 'Monthly Archives: %s', 'twentyfourteen' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'twentyfourteen' ) ) );
+	  </div>
+	</div>
 
-						elseif ( is_year() ) :
-							printf( __( 'Yearly Archives: %s', 'twentyfourteen' ), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyfourteen' ) ) );
+</div>
 
-						else :
-							_e( 'Archives', 'twentyfourteen' );
 
-						endif;
-					?>
-				</h1>
-			</header><!-- .page-header -->
 
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					twentyfourteen_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+get_footer(); ?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/tab-initialization.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/tab-animation.js" type="text/javascript"></script>  
+
+

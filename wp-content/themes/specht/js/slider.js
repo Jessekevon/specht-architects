@@ -21,5 +21,13 @@
 	  $('.home-gallery').slickNext();
 	})
 
+	$('.prev').click(function(){
+		$('.fade-slide').toggleClass('fade-slide1');
+	})
+
+	$('.next').click(function(){
+		$('.fade-slide').toggleClass('fade-slide1');
+	})
+
 
 } )( jQuery );

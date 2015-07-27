@@ -1,0 +1,30 @@
+// Image Block 
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.image-block {
+  margin-bottom: 30px;
+}
+
+.image-block-background-image {
+  height: 275px;
+}
+
+.image-block-content {
+  padding: 0;
+  @media (min-width: 992px) {
+    padding: 20px 0;
+    height: 100px;
+  }
+  h3 {
+    @media (min-width: 992px) {
+      padding: 0 40px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.image-block-background-image-wrapper {
+  overflow: hidden;
+}

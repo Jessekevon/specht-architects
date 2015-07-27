@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+  .masonry {
+    float: left;
+    width: 100%;
+  }
+  .masonry .grid-sizer {
+    width: 1px;
+  }
+  .masonry .gutter-sizer {
+    width: 30px;
+  }
+  .masonry .item {
+    width: 50%;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+  .masonry .item img {
+    max-width: 100%;
+  }
+}

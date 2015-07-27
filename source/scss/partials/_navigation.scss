@@ -11,6 +11,24 @@
         height: 130px;
         display: block;
         margin-bottom: 75px;
+        svg {
+            float: left;
+            width: 211px;
+            height: auto;
+            margin-left: 45px;
+            margin-top: 66px;
+            path {
+                fill: $red;
+                @include global-transition;
+            }
+            &:hover {
+                path {
+                    fill: $gray;
+                    @include global-transition;
+                }
+            }
+        }
+
     }
 
     ul.nav-menu {
@@ -38,29 +56,28 @@
             }
         }
     }
-    svg {
-        float: left;
-        width: 211px;
-        height: auto;
-        margin-left: 45px;
-        margin-top: 66px;
-        path {
-            fill: $red;
-            @include global-transition;
-        }
-        &:hover {
-            path {
-                fill: $gray;
-                @include global-transition;
-            }
-        }
-    }
     // Color Theme for Hompage + Other Full screen image pages 
-    .home {
+    .home, .single-work {
         .header-main {
           height: auto;
           display: inline;
           margin-bottom: 0;
+          svg {
+              position: absolute;
+              z-index: 9999;
+              top: 66px;
+              left: 45px;
+              margin: 0 auto;
+              path {
+                  fill: $white;
+              }
+              &:hover {
+                  path {
+                      fill: $red;
+                  }
+              }
+          }
+
         }
         ul.nav-menu {
             position: absolute;
@@ -76,21 +93,6 @@
                     &:hover {
                         color: $red;
                     }
-                }
-            }
-        }
-        svg {
-            position: absolute;
-            z-index: 9999;
-            top: 66px;
-            left: 45px;
-            margin: 0 auto;
-            path {
-                fill: $white;
-            }
-            &:hover {
-                path {
-                    fill: $red;
                 }
             }
         }

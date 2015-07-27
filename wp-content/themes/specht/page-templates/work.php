@@ -12,17 +12,51 @@ get_header(); ?>
 <div class="tabs-wrap">
 
 	<div id="tabs">
-	  <ul class="tabs-nav">
+	  <ul class="tabs-nav desktop">
 	    <li class="selected"><a href="#tabs-1">Latest</a></li>
-	    <li><a href="/specht/ajax/commercial.html">Commercial</a></li>
-	    <li><a href="/specht/ajax/residential.html">Residential</a></li>
-	    <li><a href="/specht/ajax/hospitality.html">Hospitality</a></li>
-	    <li><a href="/specht/ajax/education.html">Education</a></li>
-	    <li><a href="/specht/ajax/experimental.html">Experimental</a></li>
-	    <li id="magic-line" style="left: 0px; width: 100px;"></li></ul>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
+	    <!-- <li id="magic-line" style="left: 0px; width: 100px;"></li -->
 	  </ul>
+<!-- 	  <ul class="tabs-nav mobile">
+	    <li class="selected"><a href="#tabs-1">Latest</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
+	  </ul>
+ -->
 	  <div id="tabs-1">
-	    Latest
+	  	<?php
+	  	  $args = array(
+	  	    'post_type' => 'work',
+	  	    'posts_per_page' => 5,
+	  	    'orderby' => 'date',
+	  	    'order' => 'asc',
+	  	    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+	  	    );
+	  	  query_posts($args);
+	  	  while(have_posts()): the_post(); ?>
+	  	  <div class="col2 image-block">
+	  	      <a href="<?php the_permalink(); ?>">
+	  	        <div class="image-block-background-image-wrapper">
+	  	          <div class="image-block-background-image fadeIn" style="background: url('<?php echo $cfs->get('grid_item_featured_image'); ?>') no-repeat 50% 50%; background-size:cover">
+	  	          </div>
+
+	  	        </div>
+	  	    </a>
+	  	      <div class="image-block-content">
+	  	        <div class="image-block-content-inner">
+	  	          <p><?php the_title(); ?></p>
+	  	        </div>
+	  	      </div>
+	  	  </div>
+	  	  <?php endwhile;?>
+
 	  </div>
 	</div>
 

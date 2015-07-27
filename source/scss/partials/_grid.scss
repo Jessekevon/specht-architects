@@ -26,6 +26,9 @@ $susy: (
   )
 );
 
+@include border-box-sizing;
+
+
 // 'magic' container >> http://susy.oddbird.net/demos/magic/
 .wrap{
   @include container(960px);
@@ -86,5 +89,5 @@ $susy: (
 }
 
 .tabs-wrap {
-  @include container(750px);
+  @include container(960px);
 }
