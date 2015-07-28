@@ -61,6 +61,11 @@ $susy: (
   .wrap{
     @include container(750px);
   }
+
+  .tabs-wrap {
+    @include container(700px);
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -86,8 +91,9 @@ $susy: (
   .wrap{
     @include container(1170px);
   }
-}
 
-.tabs-wrap {
-  @include container(960px);
+  .tabs-wrap {
+    @include container(945px);
+  }
+
 }

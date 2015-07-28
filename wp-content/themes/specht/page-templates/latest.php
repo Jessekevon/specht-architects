@@ -31,13 +31,14 @@ get_header(); ?>
 	  	<?php
 	  	  $args = array(
 	  	    'post_type' => 'post',
-	  	    'posts_per_page' => 5,
+	  	    'posts_per_page' => 4,
 	  	    'orderby' => 'date',
 	  	    'order' => 'asc',
 	  	    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
 	  	    );
 	  	  query_posts($args);
 	  	  while(have_posts()): the_post(); ?>
+	  	  <div class="border"></div>
 	  	  <p><?php the_title(); ?></p>
 	  	  <?php endwhile;?>
 	  </div>

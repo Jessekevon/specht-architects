@@ -1,71 +1,90 @@
 <?php
-/**
- * Template Name: About
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
-
-get_header(); ?>
-
+  /**
+   * Template Name: About
+   *
+   * @package WordPress
+   * @subpackage Twenty_Fourteen
+   * @since Twenty Fourteen 1.0
+   */
+  
+  get_header(); ?>
 <div class="tabs-wrap">
+  <div id="tabs">
 
-	<div id="tabs">
-	  <ul class="tabs-nav desktop">
-	    <li class="selected"><a href="#tabs-about">About Us</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/our-team.php">Our Team</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/awards-&-recognition.php">Awards & Recognition</a></li>
-	    <!-- <li id="magic-line" style="left: 0px; width: 100px;"></li -->
-	  </ul>
-<!-- 	  <ul class="tabs-nav mobile">
-	    <li class="selected"><a href="#tabs-1">Latest</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
-	  </ul>
- -->
-	  <div id="tabs-about">
-	  	<div class="intro">
-	  	  <div class="intro-content">
-	  	    <h1>About Specht Architects</h1>
-	  	  </div>
-	  	</div>
-	  	<div class="the-content">
-	  		<p>A small company with rigorous standards for modern design, the firm's award-winning work includes commercial, institutional and residential projects, as well as custom furniture. The firm maintains offices in New York City and Austin, Texas.</p>
-	  		<div class="image-row">
-	  			
-	  		</div>
-	  		<p>Specht Harpman was recognized in Wallpaper* magazine's Architects' Directory as one of the "top 50 up and coming architectural practices from around the world." The firm recently received an Honor Award from the American Institute of Architects (Austin) for Doyle Hall at St. Edward's University. Specht Harpman has been listed among the "Emerging Voices" by the Architectural League of New York, "Tastemakers" by House and Garden magazine, and as one of New York City's "Top 100" architects by New York Magazine.</p>
-	  		<p>The firm has been honored with a number of design awards, including those from the Texas Society of Architects, New York AIA (American Institute of Architects), Austin AIA, and two Design Distinction awards from I.D. Magazine. The work of Specht Harpman has been published in many national and international publications, including The Wall Street Journal, Dwell, Metropolis, Architectural Record, Architecture, AD, Architectural Digest, Residential Architect, Interior Design, Texas Architect, Interiors, The New York Times, The New York Times Magazine, Wired, New York Magazine, and W magazine, as well as on HGTV.</p>
-	  		<div class="image-row">
-	  			
-	  		</div>
-	  	</div>
-	  	<div class="intro">
-	  	  <div class="intro-content">
-	  	    <h1>Selected Clients</h1>
-	  	  </div>
-	  	</div>
-		<div class="the-content">
-			<p>Specht Architects has worked with some of the largest brands in the world. Let’s put something humble about our clients here.</p>
-		</div>
-		<div class="selected-clients">
-			<p></p>
-		</div>
-	  </div>
-	</div>
 
+    <ul class="tabs-nav desktop">
+      <li class="selected"><a href="#about-us">About Us</a></li>
+      <li><a href="#our-team">Our Team</a></li>
+      <li><a href="#awards-&-recognition">Awards & Recognition</a></li>
+    </ul>
+
+
+    <div id="about-us">
+      <div class="about-body">
+        <div class="intro-image" style="background: url('<?=$cfs->get('about_us_top_image')?>') no-repeat 50% 50%; background-size:cover"></div>
+        <div class="about-intro">
+          <h1><?=$cfs->get('about_us_intro_title')?></h1>
+          <p><?=$cfs->get('about_us_intro_subtitle')?></p>
+        </div>
+        <div class="image-row">
+          <div class="body-copy-image-block col2" style="background: url('<?=$cfs->get('about_us_content_image_left')?>') no-repeat 50% 50%; background-size:cover"></div>
+          <div class="body-copy-image-block col2" style="background: url('<?=$cfs->get('about_us_content_image_right')?>') no-repeat 50% 50%; background-size:cover"></div>
+        </div>
+        <div class="about-body-copy">
+          <p><?=$cfs->get('about_us_body_copy')?></p>
+        </div>
+        <div class="outro-image" style="background: url('<?=$cfs->get('about_us_bottom_image')?>') no-repeat 50% 50%; background-size:cover"></div>
+        <div class="about-intro">
+          <h1><?=$cfs->get('selected_clients_intro_title')?></h1>
+          <p><?=$cfs->get('selected_clients_intro_subtitle')?></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="our-team">
+    	<div class="our-team-body">
+    	  <div class="intro-image" style="background: url('<?=$cfs->get('our_team_top_image')?>') no-repeat 50% 50%; background-size:cover"></div>
+    	  <div class="about-intro">
+    	    <h1><?=$cfs->get('our_team_intro_title')?></h1>
+    	    <p><?=$cfs->get('our_team_intro_subtitle')?></p>
+    	  </div>
+
+    	  <!-- begin team loop -->
+    	  <?php foreach ($cfs->get('the_team') AS $the_team): ?>
+
+    	  <div class="team-loop">
+    	  	<div class="border"></div>
+    	  	<div class="team-image" style="background: url('<?php echo $the_team['team_image']?>') no-repeat 50% 50%; background-size:cover"></div>
+    	  	<div class="team-body-copy">
+    	  		<div class="team-intro">
+    	  			<h1><?php echo $the_team['team_name']?></h1>
+    	  			<p><?php echo $the_team['team_title']?></p>
+    	  		</div>
+    	  		<div class="team-bio">
+    	  			<p><?php echo $the_team['team_bio']?></p>
+    	  		</div>
+    	  	</div>
+    	  </div>
+    	  <?php endforeach ?>
+    	  <!-- end loop -->
+
+    	</div>
+    </div>
+
+
+    <div id="awards-&-recognition">
+    	<div class="about-body">
+    	  <div class="intro-image" style="background: url('<?=$cfs->get('awards_recognition_top_image')?>') no-repeat 50% 50%; background-size:cover"></div>
+    	  <div class="about-intro">
+    	    <h1><?=$cfs->get('awards_recognition_intro_title')?></h1>
+    	    <p><?=$cfs->get('awards_recognition_intro_subtitle')?></p>
+    	  </div>
+    </div>
+  </div>
+  
 </div>
-
-
-
-
 <?php
-get_footer(); ?>
+  get_footer(); ?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/tab-initialization.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/tab-animation.js" type="text/javascript"></script>  
-
-
+<script src="<?php echo get_template_directory_uri(); ?>/js/tab-animation.js" type="text/javascript"></script>

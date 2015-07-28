@@ -53,3 +53,96 @@ body {
   }
 }
 
+// About Us
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+.intro-image, .outro-image {
+  height: 630px;
+  margin-bottom: 40px;
+  float: left;
+  width: 100%;
+
+}
+
+.outro-image {
+  margin-top: 40px;
+}
+
+.image-row {
+  margin: 40px 0;
+  float: left;
+  width: 100%;
+}
+
+.body-copy-image-block {
+  height: 300px;
+}
+
+.about-body {
+
+  p {
+    float: left;
+    width: 100%;
+  }
+
+}
+
+.about-intro {
+  text-align: center;
+  @media (min-width: 768px) {
+    @include span(8);
+    @include push(2);
+  }
+
+}
+.about-body-copy {
+  @media (min-width: 768px) {
+    @include span(8);
+    @include push(2);
+  }
+
+}
+
+// Our Team
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.team-image {
+  height: 221px;
+  @include span(2);
+}
+.team-body-copy {
+  @include span(10);
+
+}
+.border {
+  @include border;
+  float: left;
+  width: 100%;
+  margin: 40px auto;
+}
+.our-team-body {
+  float: left;
+  width: 100%;
+  p {
+    float: left;
+    width: 100%;
+  }
+
+}
+.team-loop {
+  float: left;
+  .team-intro {
+    margin-bottom: 20px;
+    float: left;
+    text-align: left;
+    position: relative;
+
+    p {
+      color: $red;
+    }
+  }
+}
+
+// Awards & Recognition
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
