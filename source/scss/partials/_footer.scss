@@ -2,19 +2,54 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .site-footer {
-  background: $light-grey;
-  padding: 8px 0 4px 0;
+  margin: 0 auto;
+  display: inline-block;
+  @include border;
+  padding: 40px 0 20px 0;
   text-align: center;
-  float: left;
   width: 100%;
-  @media (min-width: 992px) {
-    text-align: left;
+  margin-top: 100px;
+
+  .social {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    margin-top: 20px;
   }
+
+
+  a {
+    margin: 0 6px;
+    color: $red;
+    font-weight: 600;
+    &:hover {
+      color: $gray;
+    }
+  }
+
   p {
-    font-size: 1.0rem;
-    letter-spacing: 0.1rem;
-    text-transform: inherit;
-    margin-bottom: 0;
-    margin: 0 15px;
+    color: $gray;
+    font-size: 1.1rem;
+    letter-spacing: 0;
+    font-weight: 500;
+
+    a {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+  .footer-nav {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+
+    a {
+      font-weight: 500;
+    }
+  }
+
+}
+
+.home {
+  .site-footer {
+    display: none;
   }
 }

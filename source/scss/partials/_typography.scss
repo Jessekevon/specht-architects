@@ -5,46 +5,35 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 $font-primary: "canada-type-gibson",sans-serif;
+$font-secondary: "clarendon-text-pro", sans-serif;
 
 
-h1, h2, h3, h4, h5, h6 {
+
+h1, h2 {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: $font-secondary;
+  font-weight: 100;
 }
 
-h1 { font-size: 5.0rem; line-height: 1.2;  letter-spacing: .1rem;  }
-h2 { font-size: 4.0rem; line-height: 1.25; letter-spacing: .1rem;  }
-h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: .1rem;  }
-h4 { font-size: 2.0rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 2;  letter-spacing: -.05rem; }
-h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: 0;       }
+h1 { font-size: 5.2rem; line-height: 1.2;  letter-spacing: 0rem;  }
+h2 { font-size: 4.0rem; line-height: 1.25; letter-spacing: 0rem;  }
 
 // Larger than phablet
 @media (min-width: 768px) {
-  h1 { font-size: 8.0rem; }
-  h2 { font-size: 6.0rem; }
-  h3 { font-size: 4.0rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.2rem; }
-  h6 { font-size: 1.6rem; }
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 2.4rem; }
 }
 
 p {
   margin-top: 0;
-  letter-spacing: .1rem;
+  letter-spacing: 0rem;
   @include global-transition;
 }
 
-// Add red color to specific tags
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// .red {
-//   color: $red;
-// }
-
 @media (min-width: 768px) {
   p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 }
 

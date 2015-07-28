@@ -1,8 +1,12 @@
 // Single Post Body Content 
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 .background-image {
-	height: 75vh;
-}
+    height: 50vh;
+    @media (min-width: 768px) {
+        height: 65vh;
+      }
+  }
+
 
 .intro {
   text-align: center;
@@ -13,16 +17,9 @@
     @include push(1);
     padding: 40px 0;
   }
-  .intro-content {
-    color: $black;
-    h5 {
-      margin-top: 20px;
-      margin-bottom: 0;
-      @media (min-width: 768px) {
-        @include span(8);
-        @include push(2);
-      }
-    }
+
+  p {
+    color: $red;
   }
 }
 
@@ -43,4 +40,22 @@
 	  @include push(2);
 	}
 
+}
+
+.sidebar {
+  p {
+    color: $red;
+  }
+  ul {
+    font-size: 1.4rem;
+  }
+  @media (min-width: 768px) {
+    .sidebar-left {
+      @include span(6)
+    }
+
+    .sidebar-right {
+      @include span(6)
+    }
+  }
 }

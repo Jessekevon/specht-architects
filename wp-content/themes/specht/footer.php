@@ -11,12 +11,31 @@
 ?>
 
 
-<!-- 				<footer id="colophon" class="site-footer" role="contentinfo">
-					<div class="wrap">
-						<p>Website by what.it.is</p>
-					</div>
-				</footer>
- -->				
+<div class="wrap">
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<h2>Follow Specht Architects</h2>
+		<div class="social">
+			<a href="#">Facebook</a> /
+			<a href="#">Twitter</a> /
+			<a href="#">Instagram</a> / 
+			<a href="#">Google+</a> /
+			<a href="#">Pinterest</a> /
+			<a href="#">Houzz</a> /
+			<a href="#">Behance</a> /
+			<a href="#">LinkedIn</a> /
+		</div>
+		<div class="footer-nav">
+			<a href="#">Work</a>
+			<a href="#">About</a>
+			<a href="#">Latest</a> 
+			<a href="#">Contact</a>
+		</div>
+		<p>© 2015 Specht Architects. All rights reserved.</p>
+		<p>Design by <a href="http://what.it.is/">what.it.is</a></p>
+
+	</footer>
+</div>
+				
 
 	<?php wp_footer(); ?>
 	<script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>

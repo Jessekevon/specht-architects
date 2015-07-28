@@ -14,11 +14,11 @@ get_header(); ?>
 	<div id="tabs">
 	  <ul class="tabs-nav desktop">
 	    <li class="selected"><a href="#tabs-1">Latest</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.php">Commercial</a></li>
 	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.php">Hospitality</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.php">Education</a></li>
+	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.php">Experimental</a></li>
 	    <!-- <li id="magic-line" style="left: 0px; width: 100px;"></li -->
 	  </ul>
 <!-- 	  <ul class="tabs-nav mobile">

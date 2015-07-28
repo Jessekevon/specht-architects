@@ -18,31 +18,57 @@
 <?php endif; ?>
 
 
-<div class="body-content wrap">
-  <div class="intro">
-    <div class="intro-content">
-      <h2><?php the_title(); ?></h2>
+  <div class="body-content wrap">
+    <div class="intro">
+      <div class="intro-content">
+        <h1><?php the_title(); ?></h1>
+        <p>Tulum, Mexico</p>
+      </div>
     </div>
+
+    <div class="the-content">
+      <?php the_content(); ?>
+    </div>
+
+    <div class="the-content sidebar">
+      <div class="sidebar-left">
+        <p class="sidebar-title">Awards</p>
+        <ul>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </ul>
+      </div>
+      <div class="sidebar-right">
+        <p class="sidebar-title">Team</p>
+        <ul>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div id="links">
+      <div class="masonry">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
+        <div class="item">
+          <a href="<?php echo $work_image_gallery['gallery_image']?>" title="">
+          <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="Banana">
+          </a>
+        </div>
+        <?php endforeach ?>
+      </div>
+    </div>
+
   </div>
 
-  <div class="the-content">
-    <?php the_content(); ?>
-  </div>
-  
-  <div id="links">
-    <div class="masonry">
-      <div class="grid-sizer"></div>
-      <div class="gutter-sizer"></div>
-      <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
-      <div class="item">
-        <a href="<?php echo $work_image_gallery['gallery_image']?>" title="">
-        <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="Banana">
-        </a>
-      </div>
-      <?php endforeach ?>
-    </div>
-  </div>
-</div>
+
 
 
 <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
