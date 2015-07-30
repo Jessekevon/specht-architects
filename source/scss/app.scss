@@ -41,7 +41,7 @@ body {
     display: block;
   }
   .mobile {
-    display: none;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
@@ -51,98 +51,81 @@ body {
   .mobile {
     display: block;
   }
-}
+  // ul { 
+  //     height: 30px;
+  //     width: 150px;
+  //     border: 1px #000 solid;
+  // }
+  // ul li { padding: 5px 10px; z-index: 2; }
+  // ul li:not(.init) { float: left; width: 130px; display: none; background: #ddd; }
+  // ul li:not(.init):hover, ul li.selected:not(.init) { background: #09f; }
+  // li.init { cursor: pointer; }
 
-// About Us
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-
-
-.intro-image, .outro-image {
-  height: 630px;
-  margin-bottom: 40px;
-  float: left;
-  width: 100%;
-
-}
-
-.outro-image {
-  margin-top: 40px;
-}
-
-.image-row {
-  margin: 40px 0;
-  float: left;
-  width: 100%;
-}
-
-.body-copy-image-block {
-  height: 300px;
-}
-
-.about-body {
-
-  p {
-    float: left;
-    width: 100%;
-  }
+  // a#submit { z-index: 1; }
 
 }
 
-.about-intro {
+.text-center {
   text-align: center;
-  @media (min-width: 768px) {
-    @include span(8);
-    @include push(2);
-  }
-
-}
-.about-body-copy {
-  @media (min-width: 768px) {
-    @include span(8);
-    @include push(2);
-  }
-
 }
 
-// Our Team
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-.team-image {
-  height: 221px;
-  @include span(2);
-}
-.team-body-copy {
-  @include span(10);
-
-}
-.border {
-  @include border;
-  float: left;
-  width: 100%;
-  margin: 40px auto;
-}
-.our-team-body {
-  float: left;
-  width: 100%;
-  p {
-    float: left;
-    width: 100%;
-  }
-
-}
-.team-loop {
-  float: left;
-  .team-intro {
-    margin-bottom: 20px;
-    float: left;
-    text-align: left;
-    position: relative;
-
-    p {
-      color: $red;
-    }
-  }
+.gray {
+  color: $gray;
+  margin-right: 10px;
 }
 
-// Awards & Recognition
-//––––––––––––––––––––––––––––––––––––––––––––––––––
+// .dropdown, .dropdown label, .dropdown ul, .dropdown li {
+//   margin: 0;
+//   padding: 0;
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+//   outline: 0;
+//   -webkit-user-select: none;
+// }
 
+// .dropdown {
+//   position: relative;
+//   display: inline-block;
+//   vertical-align: middle;
+//   font-family: "Oswald";
+//   width: 180px;
+//   box-shadow: -1px 1px #fff, -3px 3px #000;
+// }
+
+// .dropdown label {
+//   padding: 0.5em;
+//   display: block;
+//   font-size: inherit;
+//   padding-right: 2em;
+//   border: 2px solid #000;
+//   text-transform: uppercase;
+//   cursor: pointer;
+//   overflow: hidden;
+//   background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 94% center;
+// }
+
+// .dropdown ul {
+//   border: 2px solid #000;
+//   border-top: 0;
+// }
+
+// .dropdown ul li {
+//   list-style: none;
+//   padding: 0.5em;
+//   display: block;
+//   font-size: inherit;
+//   text-transform: uppercase;
+//   background: #fff;
+//   cursor: pointer;
+//   width: 100%;
+// }
+
+// .dropdown ul li:not(:last-of-type) {
+//   border-bottom: 2px solid #000;
+// }
+
+// .dropdown ul {
+//   position: absolute;
+//   left: -9999px;
+// }

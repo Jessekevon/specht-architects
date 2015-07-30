@@ -1,4 +1,130 @@
 // About specific styles
 
 
+// About Us
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 
+
+.intro-image, .outro-image {
+  height: 630px;
+  margin-bottom: 40px;
+  float: left;
+  width: 100%;
+
+}
+
+.outro-image {
+  margin-top: 40px;
+}
+
+.image-row {
+  margin: 40px 0;
+  float: left;
+  width: 100%;
+}
+
+.body-copy-image-block {
+  height: 300px;
+}
+
+.about-body {
+
+  p {
+    float: left;
+    width: 100%;
+  }
+
+}
+
+.about-intro {
+  text-align: center;
+  @media (min-width: 768px) {
+    @include span(8);
+    @include push(2);
+  }
+
+}
+.about-body-copy {
+  @media (min-width: 768px) {
+    @include span(8);
+    @include push(2);
+  }
+
+}
+
+// Our Team
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.team-image {
+  height: 221px;
+  @include span(2);
+}
+.team-body-copy {
+  @include span(10);
+
+}
+.border {
+  @include border;
+  float: left;
+  width: 100%;
+  margin: 40px auto;
+}
+.our-team-body {
+  float: left;
+  width: 100%;
+  p {
+    float: left;
+    width: 100%;
+  }
+
+}
+.team-loop {
+  float: left;
+  .team-intro {
+    margin-bottom: 20px;
+    float: left;
+    text-align: left;
+    position: relative;
+
+    p {
+      color: $red;
+    }
+  }
+}
+.page-template-contact {
+	.the-content {
+		margin-bottom: 0;
+	}
+}
+.address {
+	float: left;
+	width: 100%;
+	margin: 15px 0;
+	p {
+		color: $red;
+	}
+}
+
+// Selected Clients
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.selected-clients {
+	@media (min-width: 768px) {
+		-webkit-column-count: 4; /* Chrome, Safari, Opera */
+		-moz-column-count: 4; /* Firefox */
+		column-count: 4;
+	}
+
+	float: left;
+	width: 100%;
+	margin-top: 40px;
+	text-align: center;
+	p {
+		color: $gray;
+    // padding-bottom: 10px;
+    height: 40px;
+    font-size: 1.4rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

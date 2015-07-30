@@ -3,6 +3,10 @@
 
 .image-block {
   margin-bottom: 30px;
+
+  //   &:nth-child(even) {
+  //     margin-right: 0px;   
+  // }
 }
 
 .image-block-background-image {
@@ -13,16 +17,17 @@
   padding: 0;
   @media (min-width: 992px) {
     padding: 20px 0;
-    height: 100px;
   }
-  h3 {
-    @media (min-width: 992px) {
-      padding: 0 40px;
-    }
+  h1 {
+    margin-bottom: 0;
   }
   p {
     margin-bottom: 0;
+    &:nth-child(3) {
+      margin: 20px 0;
+    }
   }
+
 }
 
 .image-block-background-image-wrapper {

@@ -35,7 +35,7 @@
 
 <body <?php body_class(); ?>>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header desktop" role="banner">
 		<div class="header-main">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="208.138px" height="60.889px" viewBox="0 0 208.138 60.889" enable-background="new 0 0 208.138 60.889" xml:space="preserve">
   <g id="Grid">
@@ -307,3 +307,16 @@
 		</div>
 	</header><!-- #masthead -->
 
+<div class="mobile mobile-menu">
+	<div class="button_container" id="toggle">
+	  <span class="top"></span>
+	  <span class="middle"></span>
+	  <span class="bottom"></span>
+	</div>
+
+	<div class="overlay" id="overlay">
+	  <nav class="overlay-menu">
+	  	<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+	  </nav>
+	</div>
+</div>

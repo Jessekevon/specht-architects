@@ -1,0 +1,225 @@
+.gform_wrapper .gform_heading {
+  display: none !important;
+}
+
+.gform_wrapper {
+    overflow: inherit;
+    margin: 1em 0;
+    max-width: 98%;
+    float: left;
+    width: 100%;
+}
+.gform_wrapper form {
+  float: left !important;
+  width: 100% !important;
+  margin-top: 40px;
+}
+
+.gfield_label {
+  display: none !important;
+}
+
+.gform_wrapper textarea.medium {
+    height: 3.375em !important;
+    width: 100% !important;
+    border: 0;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    margin: 15px 0;
+}
+
+.ginput_container {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    /* left: 0; */
+    background-color: #fff;
+    height: 40px;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    /* left: 0; */
+    background-color: #fff;
+    height: 40px;
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.gform_wrapper .top_label li.gfield.gf_left_half input.large, .gform_wrapper .top_label li.gfield.gf_left_half input.medium, .gform_wrapper .top_label li.gfield.gf_left_half select.large, .gform_wrapper .top_label li.gfield.gf_left_half select.medium, .gform_wrapper .top_label li.gfield.gf_right_half input.large, .gform_wrapper .top_label li.gfield.gf_right_half input.medium, .gform_wrapper .top_label li.gfield.gf_right_half select.large, .gform_wrapper .top_label li.gfield.gf_right_half select.medium {
+    width: 100% !important;
+    border: 0;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    margin: 15px 0;
+
+}
+
+div.fancy-select {
+  position: relative;
+  margin: 15px 0;
+}
+
+
+div.fancy-select div.trigger {
+  cursor: pointer;
+  width: 99.9%;
+  height: 38px;
+  padding: .313em 0;
+  letter-spacing: normal;
+  text-indent: .25em;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  border-left: 1px solid $gray;
+  border-right: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  color: $gray;
+  transition: all 240ms ease-out;
+  -webkit-transition: all 240ms ease-out;
+  -moz-transition: all 240ms ease-out;
+  -ms-transition: all 240ms ease-out;
+  -o-transition: all 240ms ease-out;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   /* left: 0; */
+  //   background-color: #fff;
+  //   height: 40px;
+  //   width: 1px;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  // }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   /* left: 0; */
+  //   background-color: #fff;
+  //   height: 40px;
+  //   width: 1px;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  // }
+
+}
+
+div.fancy-select div.trigger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #4B5468;
+  top: 20px;
+  right: 9px;
+}
+
+div.fancy-select ul.options {
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  top: 37px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 50;
+  max-height: 200px;
+  overflow: auto;
+  width: 100%;
+  background: $white;
+  border-radius: 4px;
+  
+  transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, top 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.open {
+  visibility: visible;
+  top: 37px;
+  opacity: 1;
+
+  /* have to use a non-visibility transition to prevent this iOS issue (bug?): */
+  /*http://stackoverflow.com/questions/10736478/css-animation-visibility-visible-works-on-chrome-and-safari-but-not-on-ios*/
+  transition: opacity 300ms ease-out, top 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, top 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, top 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, top 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, top 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing {
+  top: auto;
+  bottom: 40px;
+
+  transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, bottom 300ms ease-out, visibility 300ms ease-out;
+}
+
+div.fancy-select ul.options.overflowing.open {
+  top: auto;
+  bottom: 50px;
+
+  transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -ms-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+  -o-transition: opacity 300ms ease-out, bottom 300ms ease-out;
+}
+
+div.fancy-select ul.options li {
+  padding: 8px 12px;
+  color: $gray;
+  cursor: pointer;
+  white-space: nowrap;
+  border-top: 1px solid $red;
+  border-left: 1px solid $red;
+  border-right: 1px solid $red;
+  transition: all 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  -moz-transition: all 150ms ease-out;
+  -ms-transition: all 150ms ease-out;
+  -o-transition: all 150ms ease-out;
+
+  &:last-of-type  {
+    border-bottom: 1px solid $red;
+  }
+}
+
+div.fancy-select ul.options li.selected {
+  background: rgba(43,134,134,0.3);
+  color: rgba(255,255,255,0.75);
+}
+
+div.fancy-select ul.options li.hover {
+  color: $red;
+  background: $white;
+}
+
+.chosen-container {
+  display: none !important;
+}
+
+.gform_wrapper .gform_footer {
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+// Latest specific styles
+.page-template-latest {
+	.border:first-child {
+		display: none;
+	}
+}
+
+.post-thumb, .post-title, .post-excerpt {
+	@include span(12);
+	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.post-thumb {
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 768px) {
+	.post-thumb, .post-title, .post-excerpt {
+		@include span(4);
+		text-align: left;
+	}
+}

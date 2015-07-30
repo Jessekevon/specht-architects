@@ -35,6 +35,10 @@ p {
   p {
     font-size: 1.6rem;
   }
+
+  p.small {
+    font-size: 1.4rem;
+  }
 }
 
 // Links
@@ -43,10 +47,12 @@ p {
 a {
   font-size: 1.3rem;
   text-decoration: none;
-  color: $black;
+  color: $red;
+  font-weight: 600;
   @include global-transition;
   &:hover {
     @include global-transition;
+    color: $gray;
 
   }
 }

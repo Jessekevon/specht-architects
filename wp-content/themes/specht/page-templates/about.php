@@ -38,6 +38,14 @@
           <h1><?=$cfs->get('selected_clients_intro_title')?></h1>
           <p><?=$cfs->get('selected_clients_intro_subtitle')?></p>
         </div>
+        <div class="selected-clients">
+          <!-- begin selected clients loop -->
+          <?php foreach ($cfs->get('selected_clients') AS $selected_clients): ?>
+              <p><?php echo $selected_clients['client']?></p>
+            <?php endforeach ?>
+            <!-- end loop -->
+        </div>
+
       </div>
     </div>
 
@@ -82,7 +90,7 @@
     	  </div>
     </div>
   </div>
-  
+
 </div>
 <?php
   get_footer(); ?>

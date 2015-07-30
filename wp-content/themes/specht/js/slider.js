@@ -29,5 +29,15 @@
 		$('.fade-slide').toggleClass('fade-slide1');
 	})
 
+	$(document).ready(function() {
+	  $("#lightGallery").lightGallery({
+	  	mode: 'fade',
+	  	thumbnail: false,
+	  	preload: 10, 
+	  	loop: true
+	  }); 
+	});
+
+
 
 } )( jQuery );

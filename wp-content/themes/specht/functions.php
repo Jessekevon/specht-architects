@@ -208,7 +208,7 @@ $args = array(
 'show_admin_column'          => true,
 'show_in_nav_menus'          => true,
 'show_tagcloud'              => false,
-		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'editor' ),
+'supports'            => array( 'title', 'excerpt', 'thumbnail', 'revisions', 'editor', 'custom-fields' ),
 'rewrite'           => array( 'slug' => 'work_type' ),
 );
 register_taxonomy( 'taxonomy', array( 'work' ), $args );

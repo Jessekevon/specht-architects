@@ -114,6 +114,7 @@
 
     .title {
         p {
+            margin-top: 30px;
             color: $red;
         }
         // height: 55px;
@@ -127,6 +128,7 @@
         }
         float: right;
         margin-right: 45px;
+        margin-top: -30px;
     }
 
 }
@@ -176,114 +178,3 @@ $slick-opacity-not-active: 0.25 !default;
         }
     }
 }
-
-// .slick-prev,
-// .slick-next {
-//     position: absolute;
-//     display: block;
-//     line-height: 0px;
-//     font-size: 0px;
-//     cursor: pointer;
-//     top: 50%;
-//     margin-top: -10px;
-//     padding: 0;
-//     border: none;
-//     outline: none;
-//     &.slick-disabled:before {
-//         opacity: $slick-opacity-not-active;
-//     }
-// }
-
-// .slick-prev:before, .slick-next:before {
-//     color: $slick-arrow-color;
-//     -webkit-font-smoothing: antialiased;
-//     -moz-osx-font-smoothing: grayscale;
-// }
-
-// .left {
-//     &:before {
-//         width: 40px;
-//         content: " ";
-//         background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/left1.png);
-//         height: 60px;
-//         background-size: 40px;
-//         }
-//     &:hover {
-//         opacity: $slick-opacity-default;
-//         @include global-transition;
-//     }    
-// }
-
-// .right {
-//     &:before {
-//         width: 40px;
-//         content: " ";
-//         background-image: url(http://alturas-foundation.flywheelsites.com/wp-content/uploads/2015/07/right1.png);
-//         height: 60px;
-//         background-size: 40px;
-//     }
-//     &:hover {
-//         opacity: $slick-opacity-default;
-//         @include global-transition;
-//     }    
-
-// }
-
-// Blueimp Gallery
-
-.blueimp-gallery {
-  background: rgba(255, 255, 255, 1);
-  height: 100%;
-}
-
-.blueimp-gallery > .slides {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-  @include vertical-align;
-}
-
-.blueimp-gallery > .prev, .blueimp-gallery > .next {
-  position: absolute;
-  bottom: 0;
-  display: block;
-}
-
-.blueimp-gallery > .next {
-  left: 60px;
-}
-
-
-.blueimp-gallery > .slides > .slide > .slide-content {
-  margin: auto;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  height: 350px;
-  opacity: 1;
-}
-
-.blueimp-gallery > .close, .blueimp-gallery > .title {
-  display: block;
-}
-
-.blueimp-gallery > .slides > .slide {
-  position: relative;
-  float: left;
-  height: 100%;
-  text-align: center;
-}
-// .slide {
-//     -webkit-transition-duration: 30s !important;
-//     transition-duration: 30s !important;
-//     -webkit-transform: none !important;
-// }
-// .blueimp-gallery > .slides > .slide > .slide-content:nth-child(1) {
-//   opacity: 0;
-// }
-// .slide {
-//     -webkit-transform: none !important;
-//     transform: none !important;
-
-
-// }

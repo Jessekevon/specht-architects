@@ -30,54 +30,51 @@
       <?php the_content(); ?>
     </div>
 
-    <div class="the-content sidebar">
+    <div class="sidebar">
       <div class="sidebar-left">
         <p class="sidebar-title">Awards</p>
         <ul>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
         </ul>
       </div>
       <div class="sidebar-right">
         <p class="sidebar-title">Team</p>
         <ul>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
         </ul>
       </div>
     </div>
 
-    
-    <div id="links">
-      <div class="masonry">
-        <div class="grid-sizer"></div>
-        <div class="gutter-sizer"></div>
-        <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
-        <div class="item">
-          <a href="<?php echo $work_image_gallery['gallery_image']?>" title="">
-          <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="Banana">
-          </a>
-        </div>
-        <?php endforeach ?>
-      </div>
+    <div class="masonry">
+      <div class="grid-sizer"></div>
+      <div class="gutter-sizer"></div>
+      <ul id="lightGallery">
+          <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
+            <li class="item" data-src="<?php echo $work_image_gallery['gallery_image']?>" title="">
+              <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="">
+            </li>
+          <?php endforeach ?>
+      </ul>
+
     </div>
 
+<!--     <ul id="lightGallery">
+      <li data-src="http://localhost:8888/specht/wp-content/uploads/2015/07/Balcony5.jpg">
+        <img src="http://localhost:8888/specht/wp-content/uploads/2015/07/Balcony5.jpg" />
+      </li>
+      <li data-src="http://localhost:8888/specht/wp-content/uploads/2015/07/Living3.jpg">
+        <img src="http://localhost:8888/specht/wp-content/uploads/2015/07/Living3.jpg" />
+      </li>
+    </ul>
+ -->
   </div>
 
-
-
-
-<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-  <div class="slides fade-slide"></div>
-  <a class="prev">‹</a>
-  <a class="next">›</a>
-  <a class="close">×</a>
-</div>
 <?php endwhile;
   ?>
 <?php

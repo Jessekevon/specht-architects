@@ -12,22 +12,14 @@ get_header(); ?>
 <div class="tabs-wrap">
 
 	<div id="tabs">
-	  <ul class="tabs-nav desktop">
-	    <li class="selected"><a href="#tabs-about">Latest</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/press.php">Press</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/awards-&-recognition.php">Awards & Recognition</a></li>
-	    <!-- <li id="magic-line" style="left: 0px; width: 100px;"></li -->
-	  </ul>
-<!-- 	  <ul class="tabs-nav mobile">
-	    <li class="selected"><a href="#tabs-1">Latest</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.html">Commercial</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/hospitality.html">Hospitality</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/education.html">Education</a></li>
-	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/experimental.html">Experimental</a></li>
-	  </ul>
- -->
-	  <div id="tabs-about">
+
+	  	<ul class="tabs-nav desktop">
+	  	  <li class="selected"><a href="#latest">Latest</a></li>
+	  	  <li><a href="#press">Press</a></li>
+	  	  <li><a href="#awards-&-recognition">Awards & Recognition</a></li>
+	  	</ul>
+
+	  <div id="latest">
 	  	<?php
 	  	  $args = array(
 	  	    'post_type' => 'post',
@@ -39,9 +31,56 @@ get_header(); ?>
 	  	  query_posts($args);
 	  	  while(have_posts()): the_post(); ?>
 	  	  <div class="border"></div>
-	  	  <p><?php the_title(); ?></p>
+	  	  <div class="blog-feed">
+	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
+	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
+	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  </div>
 	  	  <?php endwhile;?>
 	  </div>
+
+
+	  <div id="press">
+	  	<?php
+	  	  $args = array(
+	  	    'post_type' => 'post',
+	  	    'posts_per_page' => 4,
+	  	    'orderby' => 'date',
+	  	    'order' => 'asc',
+	  	    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+	  	    );
+	  	  query_posts( array ( 'category_name' => 'press', 'posts_per_page' => 4 ) );
+	  	  while(have_posts()): the_post(); ?>
+	  	  <div class="border"></div>
+	  	  <div class="blog-feed">
+	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
+	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
+	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  </div>
+	  	  <?php endwhile;?>
+	  </div>
+
+
+	  <div id="awards-&-recognition">
+	  	<?php
+	  	  $args = array(
+	  	    'post_type' => 'post',
+	  	    'posts_per_page' => 4,
+	  	    'orderby' => 'date',
+	  	    'order' => 'asc',
+	  	    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
+	  	    );
+	  	  query_posts( array ( 'category_name' => 'awards-recognition', 'posts_per_page' => 4 ) );
+	  	  while(have_posts()): the_post(); ?>
+	  	  <div class="border"></div>
+	  	  <div class="blog-feed">
+	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
+	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
+	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  </div>
+	  	  <?php endwhile;?>
+	  </div>
+
 	</div>
 
 </div>

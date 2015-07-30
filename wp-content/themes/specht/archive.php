@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="tabs-wrap">
 
 	<div id="tabs">
-	  <ul class="tabs-nav desktop">
+	  <ul class="tabs-nav">
 	    <li class="selected"><a href="#tabs-1">Latest</a></li>
 	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/commercial.php">Commercial</a></li>
 	    <li><a href="<?php echo get_template_directory_uri(); ?>/ajax/residential.php">Residential</a></li>
@@ -51,7 +51,10 @@ get_header(); ?>
 	  	    </a>
 	  	      <div class="image-block-content">
 	  	        <div class="image-block-content-inner">
-	  	          <p><?php the_title(); ?></p>
+	  	          <h1><?php the_title(); ?></h1>
+	  	          <p class="gray">Hospitality</p>
+	  	          <p class="small">A beachfront, exoluxe, private villa on a protected bay in Tulum, Mexico.</p>
+	  	          <a href="<?php the_permalink(); ?>">View Project ></a>
 	  	        </div>
 	  	      </div>
 	  	  </div>

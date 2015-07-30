@@ -29,6 +29,8 @@
 			<a href="#">About</a>
 			<a href="#">Latest</a> 
 			<a href="#">Contact</a>
+<!-- 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+ -->
 		</div>
 		<p>© 2015 Specht Architects. All rights reserved.</p>
 		<p>Design by <a href="http://what.it.is/">what.it.is</a></p>
@@ -42,8 +44,11 @@
 	<script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/fade-in.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.14/slick.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/slider.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lightbox.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/slider.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/fancy-select.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/mobile-menu.js"></script>
+
 </body>
 </html>

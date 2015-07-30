@@ -21,17 +21,18 @@
 		   			<p><?php echo get_the_title($post_id_home); ?></p>
 		   		</div>
 		   		<div class="location">
-		   			<p>Location</p>
-		   		</div>
+            <p class="gray"><?php echo get_post_meta(($post_id_home), 'project_location', true); ?></p>		   		</div>
 		   		<div class="view-project">
-		   			<p>View Project</p>
+            <a href="<?php echo get_the_permalink($post_id_home); ?>">View Project ></a>
 		   		</div>
 
 			</div>
 	   </div>
 
 	<?php endforeach; ?>
+
 </div>
+
 
 
 <!-- Arrows -->

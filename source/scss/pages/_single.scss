@@ -36,13 +36,19 @@
 .the-content {
   margin-bottom: 40px;
 	@media (min-width: 768px) {
-	  @include span(8);
-	  @include push(2);
+	  @include span(6);
+	  @include push(3);
 	}
 
 }
 
 .sidebar {
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    @include span(8);
+    @include push(2);
+  }
+
   p {
     color: $red;
   }
