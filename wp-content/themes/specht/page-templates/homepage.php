@@ -21,9 +21,10 @@
 		   			<p><?php echo get_the_title($post_id_home); ?></p>
 		   		</div>
 		   		<div class="location">
-            <p class="gray"><?php echo get_post_meta(($post_id_home), 'project_location', true); ?></p>		   		</div>
+            <p class="gray"><?php echo get_post_meta(($post_id_home), 'project_location', true); ?></p>		   	
+            </div>
 		   		<div class="view-project">
-            <a href="<?php echo get_the_permalink($post_id_home); ?>">View Project ></a>
+            <a href="<?php echo get_the_permalink($post_id_home); ?>">View Project&nbsp;&nbsp;></a>
 		   		</div>
 
 			</div>

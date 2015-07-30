@@ -17,6 +17,8 @@ get_header(); ?>
 	  	  <li class="selected"><a href="#latest">Latest</a></li>
 	  	  <li><a href="#press">Press</a></li>
 	  	  <li><a href="#awards-&-recognition">Awards & Recognition</a></li>
+	  	  <a class="press-kit" target="_blank" href="http://heriverde.nimoz.pl/wp-content/uploads/pdf-sample.pdf">Press Kit</a>
+
 	  	</ul>
 
 	  <div id="latest">
@@ -33,8 +35,18 @@ get_header(); ?>
 	  	  <div class="border"></div>
 	  	  <div class="blog-feed">
 	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
-	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
-	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  	<div class="post-title">
+	  	  		<h1><?php the_title(); ?></h1>
+	  	  		<p class="gray"><?=$cfs->get('post_location')?></p>
+	  	  		<p class="gray"><?=$cfs->get('award_source')?></p>
+
+	  	  	</div>
+	  	  	<div class="post-excerpt">
+	  	  		<p><?=$cfs->get('post_summary')?></p>
+	  	  		<a href="<?=$cfs->get('post_link')?>">View Article&nbsp;&nbsp;></a>
+
+	  	  	</div>
+
 	  	  </div>
 	  	  <?php endwhile;?>
 	  </div>
@@ -54,8 +66,16 @@ get_header(); ?>
 	  	  <div class="border"></div>
 	  	  <div class="blog-feed">
 	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
-	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
-	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  	<div class="post-title">
+	  	  		<h1><?php the_title(); ?></h1>
+	  	  		<p class="gray"><?=$cfs->get('post_location')?></p>
+
+	  	  	</div>
+	  	  	<div class="post-excerpt">
+	  	  		<p><?=$cfs->get('post_summary')?></p>
+	  	  		<a href="<?=$cfs->get('post_link')?>">View Article&nbsp;&nbsp;></a>
+
+	  	  	</div>
 	  	  </div>
 	  	  <?php endwhile;?>
 	  </div>
@@ -75,10 +95,27 @@ get_header(); ?>
 	  	  <div class="border"></div>
 	  	  <div class="blog-feed">
 	  	  	<div class="post-thumb"> <?php the_post_thumbnail( $size, $attr ); ?></div>
-	  	  	<div class="post-title"><h1><?php the_title(); ?></h1></div>
-	  	  	<div class="post-excerpt"><p>This could be a quote or the beginning intro to the article about the project. Just make sure that the view article link actually links to the article...</p></div>
+	  	  	<div class="post-title">
+	  	  		<h1><?php the_title(); ?></h1>
+	  	  		<p class="gray"><?=$cfs->get('award_source')?></p>
+
+	  	  	</div>
+	  	  	<div class="post-excerpt">
+	  	  		<p><?=$cfs->get('post_summary')?></p>
+	  	  		<a href="<?=$cfs->get('post_link')?>">View Article&nbsp;&nbsp;></a>
+
+	  	  	</div>
 	  	  </div>
 	  	  <?php endwhile;?>
+	  	  <div class="border"></div>
+	  	  <div class="about-intro">
+	  	    <h1>Download our Press Kit</h1>
+	  	    <div class="button-wrapper">
+	  	      <a target="_blank" href="http://heriverde.nimoz.pl/wp-content/uploads/pdf-sample.pdf"><button class="button">Download Now</button></a>
+	  	    </div>
+
+	  	  </div>
+
 	  </div>
 
 	</div>

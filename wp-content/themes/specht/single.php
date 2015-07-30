@@ -22,7 +22,7 @@
     <div class="intro">
       <div class="intro-content">
         <h1><?php the_title(); ?></h1>
-        <p>Tulum, Mexico</p>
+        <p><?php echo $cfs->get('project_location'); ?></p>
       </div>
     </div>
 
@@ -63,16 +63,6 @@
       </ul>
 
     </div>
-
-<!--     <ul id="lightGallery">
-      <li data-src="http://localhost:8888/specht/wp-content/uploads/2015/07/Balcony5.jpg">
-        <img src="http://localhost:8888/specht/wp-content/uploads/2015/07/Balcony5.jpg" />
-      </li>
-      <li data-src="http://localhost:8888/specht/wp-content/uploads/2015/07/Living3.jpg">
-        <img src="http://localhost:8888/specht/wp-content/uploads/2015/07/Living3.jpg" />
-      </li>
-    </ul>
- -->
   </div>
 
 <?php endwhile;

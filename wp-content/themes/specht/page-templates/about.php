@@ -88,6 +88,24 @@
     	    <h1><?=$cfs->get('awards_recognition_intro_title')?></h1>
     	    <p><?=$cfs->get('awards_recognition_intro_subtitle')?></p>
     	  </div>
+        <div class="about-awards">
+
+        <?php
+          query_posts( array ( 'category_name' => 'awards-recognition', 'posts_per_page' => 6 ) );
+          while(have_posts()): the_post(); ?>
+            
+          <div class="about-feed">
+            <h1><?php the_title(); ?></h1>
+            <p class="gray"><?=$cfs->get('award_source')?></p>
+            <p class="award-summary"><?=$cfs->get('post_summary')?></p>
+            <a href="<?=$cfs->get('post_link')?>">View Article&nbsp;&nbsp;></a>
+
+          </div>
+          <?php endwhile;?>
+          </div>
+          <div class="button-wrapper">
+            <a href="http://localhost:8888/specht/work/"><button class="button">View All</button></a>
+          </div>
     </div>
   </div>
 

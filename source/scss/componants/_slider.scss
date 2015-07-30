@@ -128,7 +128,7 @@
         }
         float: right;
         margin-right: 45px;
-        margin-top: -30px;
+        margin-top: -50px;
     }
 
 }
@@ -157,10 +157,11 @@ $slick-opacity-not-active: 0.25 !default;
 
 
 .arrows {
-    position: absolute;
+    position: relative;
     left: 45px;
     bottom: 80px;
     z-index: 9999;
+    width: 55px;
     .left {
         display: inline-block;
         margin-right: 15px;

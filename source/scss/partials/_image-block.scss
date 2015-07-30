@@ -4,9 +4,9 @@
 .image-block {
   margin-bottom: 30px;
 
-  //   &:nth-child(even) {
-  //     margin-right: 0px;   
-  // }
+    &:nth-last-child(1) {
+      margin-bottom: 0px;   
+  }
 }
 
 .image-block-background-image {

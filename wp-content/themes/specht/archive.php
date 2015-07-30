@@ -53,8 +53,9 @@ get_header(); ?>
 	  	        <div class="image-block-content-inner">
 	  	          <h1><?php the_title(); ?></h1>
 	  	          <p class="gray">Hospitality</p>
-	  	          <p class="small">A beachfront, exoluxe, private villa on a protected bay in Tulum, Mexico.</p>
-	  	          <a href="<?php the_permalink(); ?>">View Project ></a>
+
+	  	          <p class="small"><?php echo get_post_meta(get_the_ID(), 'excerpt', true); ?></p>
+	  	          <a href="<?php the_permalink(); ?>">View Project&nbsp;&nbsp;></a>
 	  	        </div>
 	  	      </div>
 	  	  </div>

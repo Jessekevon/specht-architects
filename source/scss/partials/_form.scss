@@ -55,6 +55,15 @@
   }
 }
 
+.gform_wrapper input[type=email], .gform_wrapper input[type=number], .gform_wrapper input[type=password], .gform_wrapper input[type=tel], .gform_wrapper input[type=text], .gform_wrapper input[type=url] {
+    // outline-style: none;
+    // font-size: inherit;
+    // font-family: inherit;
+    // padding: .313em 0;
+    // letter-spacing: normal;
+    text-indent: .9rem !important;
+}
+
 .gform_wrapper .top_label li.gfield.gf_left_half input.large, .gform_wrapper .top_label li.gfield.gf_left_half input.medium, .gform_wrapper .top_label li.gfield.gf_left_half select.large, .gform_wrapper .top_label li.gfield.gf_left_half select.medium, .gform_wrapper .top_label li.gfield.gf_right_half input.large, .gform_wrapper .top_label li.gfield.gf_right_half input.medium, .gform_wrapper .top_label li.gfield.gf_right_half select.large, .gform_wrapper .top_label li.gfield.gf_right_half select.medium {
     width: 100% !important;
     border: 0;
@@ -77,7 +86,7 @@ div.fancy-select div.trigger {
   height: 38px;
   padding: .313em 0;
   letter-spacing: normal;
-  text-indent: .25em;
+  text-indent: .9rem;
 
   white-space: nowrap;
   overflow: hidden;
@@ -165,6 +174,8 @@ div.fancy-select ul.options.open {
   -o-transition: opacity 300ms ease-out, top 300ms ease-out;
 }
 
+
+
 div.fancy-select ul.options.overflowing {
   top: auto;
   bottom: 40px;
@@ -223,3 +234,30 @@ div.fancy-select ul.options li.hover {
 .gform_wrapper .gform_footer {
     text-align: center;
 }
+input[type=text] {
+    color: $gray !important;
+}
+input[type=text]:focus, textarea:focus {
+    border-left: 1px solid $red !important;
+    border-right: 1px solid $red !important;
+    border-bottom: 1px solid $red !important;
+
+}
+
+.gform_wrapper textarea.medium{
+  height: 38px !important;
+  line-height: 25px;
+  text-indent: .9rem;
+}  
+
+.gform_wrapper .top_label li.gfield.gf_left_half {
+    margin-right: 3% !important;
+}
+
+    .gform_wrapper .top_label li.gfield.gf_left_half {
+        width: 48.5% !important;
+    }
+
+    .gform_wrapper .top_label li.gfield.gf_right_half {
+        width: 48.5% !important;
+    }

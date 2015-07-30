@@ -54,7 +54,7 @@ get_header(); ?>
 	  	  	    <p>Austin / New York</p>
 	  	  	  </div>
 	  	  	</div>
-	  	  	<div class="the-content">
+	  	  	<div class="the-content text-center">
 	  	  		<p>Specht Architects Austin headquarters occupies three floors of a historic building in downtown Austin.</p>
 	  	  	</div>
 	  	  	<?php echo do_shortcode('[gravityform id="1" name="Inquiries" ajax="true"]'); ?>
@@ -70,6 +70,12 @@ get_header(); ?>
 
 <?php
 get_footer(); ?>
+<script type="text/javascript">
+( function( $ ) {
+
+} )( jQuery );
+
+</script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/tab-initialization.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/tab-animation.js" type="text/javascript"></script>  
 
