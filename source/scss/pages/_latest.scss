@@ -14,6 +14,9 @@
 	.post-thumb {
 		margin-bottom: 40px;
 	}
+	a.press-kit {
+		display: none;
+	}
 }
 @media (min-width: 768px) {
 	.post-thumb, .post-title, .post-excerpt {
@@ -28,3 +31,4 @@
 		margin-bottom: 20px;
 	}
 }
+

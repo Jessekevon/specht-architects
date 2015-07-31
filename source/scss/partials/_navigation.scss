@@ -2,18 +2,11 @@
 
 // Mobile Nav
 
-
-
-$color-background: #F5F5F5;
-$color-main: #FF5252;
-$color-active: #FFF;
-$color-link: #FFF;
-
-$button-height: 27px;
-$button-width: 35px;
-
 .mobile-menu {
   display: inline-block;
+  height: 160px;
+  float: left;
+  width: 100%;
   a {
     display: inline-block;
     position: relative;
@@ -56,8 +49,8 @@ h1 {
   position: absolute;
   right: 5%;
   top: 5%;
-  height: $button-height;
-  width: $button-width;
+  height: 27px;
+  width: 35px;
   cursor: pointer;
   z-index: 99999;
   transition: opacity .25s ease;
@@ -197,30 +190,17 @@ h1 {
 }
 
 @keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%;
-  }
-  100% {
-    opacity: 1;
-    left: 0;
-  }
-}
-
+      0% {
+        opacity: 0;
+        left: 20%;
+      }
+      100% {
+        opacity: 1;
+        left: 0;
+      }
+   }
 }  
 
-// .home, .single-work {
-//   .mobile-menu {
-//     .button-container {
-//       span {
-//         background: $white;
-//       }
-
-//     }
-//   }
-// }
-
-////////////////
 
 // Above Mobile
  @media (min-width: 768px) {
@@ -246,7 +226,6 @@ h1 {
                 }
             }
         }
-
     }
 
     ul.nav-menu {
@@ -294,6 +273,7 @@ h1 {
                       fill: $red;
                   }
               }
+
           }
 
         }
@@ -319,6 +299,38 @@ h1 {
 
 @media (max-width: 767px) {
   .header-main {
-    display: none;
+    position: absolute;
+    z-index: 9999;
+
+    svg {
+      z-index: 9999;
+      position: absolute;
+      width: 150px;
+      top: 16px;
+      left: 15px;
+
+      path {
+          fill: $red;
+      }
+    }
   }
+
+  .home, .single-work {
+    .mobile-menu {
+      position: absolute;
+    }
+    .mobile-menu .button_container {
+      top: 17%;
+    }
+
+    .mobile-menu .button_container span {
+      background: $white;
+    }
+    svg {
+      path {
+          fill: $white;
+      }
+    }
+  }
+
 }

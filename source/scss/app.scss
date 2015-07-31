@@ -52,6 +52,7 @@ body {
     display: none;
   }
   .mobile {
+    // display: inline-block;
     display: block;
   }
   // ul { 
@@ -77,58 +78,38 @@ body {
   margin-right: 10px;
 }
 
-// .dropdown, .dropdown label, .dropdown ul, .dropdown li {
-//   margin: 0;
-//   padding: 0;
-//   -webkit-box-sizing: border-box;
-//   -moz-box-sizing: border-box;
-//   box-sizing: border-box;
-//   outline: 0;
-//   -webkit-user-select: none;
-// }
+@media (max-width: 767px) {
+  .dropdown {
+    width: 300px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    .js-link {
+      padding: 20px 10px;
+      border: 1px solid $red;
+    }
+    ul {
+      display: none;
+      margin: 0 0 40px 0;
+      float: left;
+      width: 100%;
 
-// .dropdown {
-//   position: relative;
-//   display: inline-block;
-//   vertical-align: middle;
-//   font-family: "Oswald";
-//   width: 180px;
-//   box-shadow: -1px 1px #fff, -3px 3px #000;
-// }
+    }
+    li {
+      cursor: pointer;
+      a {
+        float: left;
+        width: 100%;
+        padding: 20px 10px;
+        // border-top: 1px solid $red;
+        // border-left: 1px solid $red;
+        // border-right: 1px solid $red;
+        border: 1px solid $red;
 
-// .dropdown label {
-//   padding: 0.5em;
-//   display: block;
-//   font-size: inherit;
-//   padding-right: 2em;
-//   border: 2px solid #000;
-//   text-transform: uppercase;
-//   cursor: pointer;
-//   overflow: hidden;
-//   background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 94% center;
-// }
 
-// .dropdown ul {
-//   border: 2px solid #000;
-//   border-top: 0;
-// }
+      }
 
-// .dropdown ul li {
-//   list-style: none;
-//   padding: 0.5em;
-//   display: block;
-//   font-size: inherit;
-//   text-transform: uppercase;
-//   background: #fff;
-//   cursor: pointer;
-//   width: 100%;
-// }
+    }
 
-// .dropdown ul li:not(:last-of-type) {
-//   border-bottom: 2px solid #000;
-// }
+  }
 
-// .dropdown ul {
-//   position: absolute;
-//   left: -9999px;
-// }
+}
