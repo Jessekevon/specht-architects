@@ -18,16 +18,16 @@ $button-width: 35px;
     display: inline-block;
     position: relative;
     text-align: center;
-    color: $color-main;
+    color: $red;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 40px;
     overflow: hidden;
-    top: 5px;
+    font-weight: 400;
     
     &:after {
       content: '';
       position: absolute;
-      background: $color-main;
+      background: $red;
       height: 2px;
       width: 0%;
       transform: translateX(-50%);
@@ -41,17 +41,21 @@ $button-width: 35px;
       width: 100%;
     }
   }
-
+.menu-main-menu-container {
+  @include vertical-align;
+}
 
 h1 {
   position: relative;
   text-align: center;
-  font-family: 'Vollkorn', serif;
+  font-family: $font-primary;
 }
 
 .button_container {
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   right: 5%;
+  top: 5%;
   height: $button-height;
   width: $button-width;
   cursor: pointer;
@@ -65,23 +69,23 @@ h1 {
   &.active {
     .top {
       transform: translateY(11px) translateX(0) rotate(45deg);
-      background: $color-active;
+      background: $white;
     }
     .middle {
       opacity: 0;
-      background: $color-active;
+      background: $white;
     }
     
     .bottom {
       transform: translateY(-11px) translateX(0) rotate(-45deg);
-      background: $color-active;
+      background: $white;
     }
   }
   
   span {
-  background: $color-main;
+  background: $red;
   border: none;
-  height: 5px;
+  height: 3px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -101,7 +105,7 @@ h1 {
 
 .overlay {
   position: fixed;
-  background: $color-main;
+  background: $red;
   top: 0;
   left: 0;
   width: 100%;
@@ -137,8 +141,8 @@ h1 {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-    font-family: 'Vollkorn', serif;
-    font-weight: 400;
+    font-family: $font-primary;
+    font-weight: 300;
     text-align: center;
   }
   ul {
@@ -156,31 +160,37 @@ h1 {
       min-height: 50px;
       position: relative;
       opacity: 0;
+      margin: 30px 0;
+      // border-bottom: 1px solid $white;
+      // &:nth-child(4) {
+      //   border-bottom: 0px;
+      // }
+
       
       a {
         display: block;
         position: relative;
-        color: $color-link;
+        color: $white;
         text-decoration: none;
         overflow: hidden;
         
-        &:hover:after,
-         &:focus:after,
-         &:active:after {
-           width: 100%;
-         }
+        // &:hover:after,
+        //  &:focus:after,
+        //  &:active:after {
+        //    width: 100%;
+        //  }
         
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          transform: translateX(-50%);
-          height: 3px;
-          background: $color-link;
-          transition: .35s;
-        }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   bottom: 0;
+        //   left: 50%;
+        //   width: 0%;
+        //   transform: translateX(-50%);
+        //   height: 3px;
+        //   background: $white;
+        //   transition: .35s;
+        // }
       }
     }
   }
@@ -199,6 +209,16 @@ h1 {
 
 }  
 
+// .home, .single-work {
+//   .mobile-menu {
+//     .button-container {
+//       span {
+//         background: $white;
+//       }
+
+//     }
+//   }
+// }
 
 ////////////////
 

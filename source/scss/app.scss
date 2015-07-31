@@ -45,6 +45,9 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .content-container {
+    padding: 0 30px;
+  }
   .desktop {
     display: none;
   }

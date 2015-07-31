@@ -4,6 +4,9 @@
   float: left;
   width: 100%;
   text-align: center;
+  @media (max-width: 767px) {
+    margin-top: 40px;
+  }
   
 }
 .button {
@@ -66,12 +69,6 @@ input {
     color: $white;
     outline: 0;
   }
-}
-
-.button:focus {
-  color: $dark-grey;
-  border-color: lighten($dark-grey, 33.3%);
-  outline: 0;
 }
 
 input {

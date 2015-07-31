@@ -19,49 +19,51 @@
 
 
   <div class="body-content wrap">
-    <div class="intro">
-      <div class="intro-content">
-        <h1><?php the_title(); ?></h1>
-        <p><?php echo $cfs->get('project_location'); ?></p>
+    <div class="content-container">
+      <div class="intro">
+        <div class="intro-content">
+          <h1><?php the_title(); ?></h1>
+          <p><?php echo $cfs->get('project_location'); ?></p>
+        </div>
       </div>
-    </div>
 
-    <div class="the-content">
-      <?php the_content(); ?>
-    </div>
+      <div class="the-content">
+        <?php the_content(); ?>
+      </div>
 
-    <div class="sidebar">
-      <div class="sidebar-left">
-        <p class="sidebar-title">Awards</p>
-        <ul>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+      <div class="sidebar">
+        <div class="sidebar-left">
+          <p class="sidebar-title">Awards</p>
+          <ul>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          </ul>
+        </div>
+        <div class="sidebar-right">
+          <p class="sidebar-title">Team</p>
+          <ul>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+            <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="masonry">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+        <ul id="lightGallery">
+            <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
+              <li class="item" data-src="<?php echo $work_image_gallery['gallery_image']?>" title="">
+                <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="">
+              </li>
+            <?php endforeach ?>
         </ul>
-      </div>
-      <div class="sidebar-right">
-        <p class="sidebar-title">Team</p>
-        <ul>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-          <li><span class="gray">Best Design of the Year</span>Dwell Magazine, 2015</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="masonry">
-      <div class="grid-sizer"></div>
-      <div class="gutter-sizer"></div>
-      <ul id="lightGallery">
-          <?php foreach ($cfs->get('work_image_gallery') AS $work_image_gallery): ?>
-            <li class="item" data-src="<?php echo $work_image_gallery['gallery_image']?>" title="">
-              <img src="<?php echo $work_image_gallery['gallery_image']?>" alt="">
-            </li>
-          <?php endforeach ?>
-      </ul>
-
+      </div>
     </div>
   </div>
 

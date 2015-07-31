@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div id="tabs">
 
-	  	<ul class="tabs-nav desktop">
+	  	<ul class="tabs-nav">
 	  	  <li class="selected"><a href="#latest">Latest</a></li>
 	  	  <li><a href="#press">Press</a></li>
 	  	  <li><a href="#awards-&-recognition">Awards & Recognition</a></li>

@@ -13,29 +13,31 @@
 
 <div class="wrap">
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<h2>Follow Specht Architects</h2>
-		<div class="social">
-			<a href="#">Facebook</a> /
-			<a href="#">Twitter</a> /
-			<a href="#">Instagram</a> / 
-			<a href="#">Google+</a> /
-			<a href="#">Pinterest</a> /
-			<a href="#">Houzz</a> /
-			<a href="#">Behance</a> /
-			<a href="#">LinkedIn</a> /
-		</div>
-		<div class="footer-nav">
-			<a href="#">Work</a>
-			<a href="#">About</a>
-			<a href="#">Latest</a> 
-			<a href="#">Contact</a>
-<!-- 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
- -->
-		</div>
-		<p>© 2015 Specht Architects. All rights reserved.</p>
-		<p>Design by <a href="http://what.it.is/">what.it.is</a></p>
+		<div class="content-container">
+					<h2>Follow Specht Architects</h2>
+					<div class="social">
+						<a href="#">Facebook</a> /
+						<a href="#">Twitter</a> /
+						<a href="#">Instagram</a> / 
+						<a href="#">Google+</a> /
+						<a href="#">Pinterest</a> /
+						<a href="#">Houzz</a> /
+						<a href="#">Behance</a> /
+						<a href="#">LinkedIn</a> /
+					</div>
+					<div class="footer-nav">
+						<a href="#">Work</a>
+						<a href="#">About</a>
+						<a href="#">Latest</a> 
+						<a href="#">Contact</a>
+			<!-- 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			 -->
+					</div>
+					<p>© 2015 Specht Architects. All rights reserved.</p>
+					<p>Design by <a href="http://what.it.is/">what.it.is</a></p>
 
-	</footer>
+				</footer>
+		</div>
 </div>
 				
 
