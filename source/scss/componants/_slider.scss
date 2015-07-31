@@ -1,6 +1,5 @@
 /* Slider */
-
-.slick-slider {
+ .slick-slider {
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -16,15 +15,13 @@
     -webkit-tap-highlight-color: transparent;
     width: auto;
     text-align: center;
-
     @media (min-width: 768px) {
         margin: 0 auto;
-      }
-
-      img {
+    }
+    img {
         max-width: 100%;
         height: auto;
-      }
+    }
 }
 .slick-list {
     position: relative;
@@ -33,33 +30,26 @@
     margin: 0;
     padding: 0;
     width: 100%;
-
     &:focus {
         outline: none;
     }
-
     &.dragging {
         cursor: pointer;
         cursor: hand;
     }
 }
-
 .slick-track {
     position: relative;
     left: 0;
     top: 0;
     display: block;
-
-    &:before,
-    &:after {
-        content: "";
+    &:before, &:after {
+        content:"";
         display: table;
     }
-
     &:after {
         clear: both;
     }
-
     .slick-loading & {
         visibility: hidden;
     }
@@ -77,41 +67,33 @@
     &.slick-loading img {
         display: none;
     }
-
     display: none;
-
     &.dragging img {
         pointer-events: none;
     }
-
     .slick-initialized & {
         display: block;
     }
-
     .slick-loading & {
         visibility: hidden;
     }
-
     .slick-vertical & {
         display: block;
         height: auto;
         border: 1px solid transparent;
     }
 }
-
 .home {
     .slick-slider {
         margin-bottom: 30px;
     }
 }
-
 .slider-info {
     position: absolute;
     margin: 0;
     bottom: 0;
-    width: 100%;    
+    width: 100%;
     background: $white;
-
     .title {
         p {
             margin-top: 30px;
@@ -119,9 +101,7 @@
         }
         // height: 55px;
         // line-height: 55px;
-
     }
-
     .view-project {
         p {
             color: $red;
@@ -132,33 +112,24 @@
             margin-top: -50px;
         }
     }
-
 }
-
-@charset "UTF-8";
-
-// Default Variables
-
-$slick-font-path: "./fonts/" !default;
-$slick-font-family: "slick" !default;
-$slick-loader-path: "./" !default;
-$slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
-$slick-prev-character: "←" !default;
-$slick-next-character: "→" !default;
-$slick-dot-character: "•" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.5 !default;
-$slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
-
+@charset"UTF-8";
+ // Default Variables $slick-font-path:"./fonts/" !default;
+ $slick-font-family:"slick" !default;
+ $slick-loader-path:"./" !default;
+ $slick-arrow-color: white !default;
+ $slick-dot-color: black !default;
+ $slick-dot-color-active: $slick-dot-color !default;
+ $slick-prev-character:"←" !default;
+ $slick-next-character:"→" !default;
+ $slick-dot-character:"•" !default;
+ $slick-dot-size: 6px !default;
+ $slick-opacity-default: 0.5 !default;
+ $slick-opacity-on-hover: 1 !default;
+ $slick-opacity-not-active: 0.25 !default;
 
 /* Arrows */
-
-
-
-.arrows {
+ .arrows {
     bottom: 80px;
     z-index: 9999;
     position: relative;
@@ -166,7 +137,6 @@ $slick-opacity-not-active: 0.25 !default;
         width: 55px;
         left: 45px;
     }
-
     .left {
         display: inline-block;
         margin-right: 15px;
@@ -181,11 +151,9 @@ $slick-opacity-not-active: 0.25 !default;
             position: absolute;
             right: 10%;
         }
-
     }
     svg {
         cursor: pointer;
-
         &:hover {
             polyline {
                 stroke: $gray;

@@ -1,21 +1,16 @@
 // Home specific styles
 
 .landing-background-image {
-	height: 85vh;
+    height: 85vh;
 }
-
 @media (min-width: 768px) {
-	.next-project {
-		text-align: right;
-	}
-
-	.description {
-		text-align: center;
-	}
-
-	.home-bottom-section {
-		margin: 0 45px;
-	}
-
+    .next-project {
+        text-align: right;
+    }
+    .description {
+        text-align: center;
+    }
+    .home-bottom-section {
+        margin: 0 45px;
+    }
 }
-

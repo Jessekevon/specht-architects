@@ -1,145 +1,112 @@
-// Buttons
-//––––––––––––––––––––––––––––––––––––––––––––––––––
+// Buttons //–––––––––––––––––––––––––––––––––––––––––––––––––– 
 .button-wrapper {
-  float: left;
-  width: 100%;
-  text-align: center;
-  @media (max-width: 767px) {
-    margin-top: 40px;
-  }
-  
+    float: left;
+    width: 100%;
+    text-align: center;
+    @media (max-width: 767px) {
+        margin-top: 40px;
+    }
 }
 .button {
-  display: inline-block;
-  color: #ff664b;
-  padding: 15px 45px;
-  text-align: center;
-  font-size: 11px;
-  border: 1px solid $red;
-  cursor: pointer;
-  box-sizing: border-box;
-  font-family: $font-primary;
-  @include global-transition;
-
-}
-
-input {
-  &[type="submit"],
-  &[type="reset"],
-  &[type="button"] {
     display: inline-block;
-    color: $red;
-    padding: 17px;
+    color: #ff664b;
+    padding: 15px 45px;
     text-align: center;
     font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: transparent;
-    // border-radius: $global-radius;
     border: 1px solid $red;
     cursor: pointer;
     box-sizing: border-box;
     font-family: $font-primary;
-    font-weight: 300;
-  }
-}
-
-.button:hover {
-  background: $red;
-  color: $white;
-  border-color: $red;
-  outline: 0;
-  @include global-transition;
-}
-
-.button:hover  {
-  p {
-    color: $white;
     @include global-transition;
-  }
 }
-
-
 input {
-  &[type="submit"]:hover,
-  &[type="reset"]:hover,
-  &[type="button"]:hover {
+    &[type="submit"], &[type="reset"], &[type="button"] {
+        display: inline-block;
+        color: $red;
+        padding: 17px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        white-space: nowrap;
+        background-color: transparent;
+        // border-radius: $global-radius;
+        border: 1px solid $red;
+        cursor: pointer;
+        box-sizing: border-box;
+        font-family: $font-primary;
+        font-weight: 300;
+    }
+}
+.button:hover {
+    background: $red;
     color: $white;
-    outline: 0;
-  }
-}
-
-input {
-  &[type="submit"]:focus,
-  &[type="reset"]:focus,
-  &[type="button"]:focus {
-    color: $gray;
     border-color: $red;
     outline: 0;
-  }
+    @include global-transition;
 }
-
-.button.button-primary {
-  color: #fff;
-  background-color: $primary-color;
-  border-color: $primary-color;
+.button:hover {
+    p {
+        color: $white;
+        @include global-transition;
+    }
 }
-
 input {
-  &[type="submit"].button-primary,
-  &[type="reset"].button-primary,
-  &[type="button"].button-primary {
+    &[type="submit"]:hover, &[type="reset"]:hover, &[type="button"]:hover {
+        color: $white;
+        outline: 0;
+    }
+}
+input {
+    &[type="submit"]:focus, &[type="reset"]:focus, &[type="button"]:focus {
+        color: $gray;
+        border-color: $red;
+        outline: 0;
+    }
+}
+.button.button-primary {
     color: #fff;
     background-color: $primary-color;
     border-color: $primary-color;
-  }
 }
-
+input {
+    &[type="submit"].button-primary, &[type="reset"].button-primary, &[type="button"].button-primary {
+        color: #fff;
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+}
 .button.button-primary:hover {
-  color: #fff;
-  background-color: $link-color;
-  border-color: $link-color;
-}
-
-input {
-  &[type="submit"].button-primary:hover,
-  &[type="reset"].button-primary:hover,
-  &[type="button"].button-primary:hover {
     color: #fff;
     background-color: $link-color;
     border-color: $link-color;
-  }
 }
-
+input {
+    &[type="submit"].button-primary:hover, &[type="reset"].button-primary:hover, &[type="button"].button-primary:hover {
+        color: #fff;
+        background-color: $link-color;
+        border-color: $link-color;
+    }
+}
 .button.button-primary:focus {
-  color: #fff;
-  background-color: $link-color;
-  border-color: $link-color;
-}
-
-input {
-  &[type="submit"].button-primary:focus,
-  &[type="reset"].button-primary:focus,
-  &[type="button"].button-primary:focus {
     color: #fff;
     background-color: $link-color;
     border-color: $link-color;
-  }
-  &[type="email"],
-  &[type="number"],
-  &[type="search"],
-  &[type="text"],
-  &[type="tel"],
-  &[type="url"],
-  &[type="password"] {
-    height: 38px;
-    padding: 6px 10px; // The 6px vertically centers text on FF, ignored by Webkit
-    background-color: #fff;
-    // border: 1px solid lighten($border-color, 8.8%);
-    // border-radius: $global-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-  }
+}
+input {
+    &[type="submit"].button-primary:focus, &[type="reset"].button-primary:focus, &[type="button"].button-primary:focus {
+        color: #fff;
+        background-color: $link-color;
+        border-color: $link-color;
+    }
+    &[type="email"], &[type="number"], &[type="search"], &[type="text"], &[type="tel"], &[type="url"], &[type="password"] {
+        height: 38px;
+        padding: 6px 10px;
+        // The 6px vertically centers text on FF, ignored by Webkit background-color: #fff;
+        // border: 1px solid lighten($border-color, 8.8%);
+        // border-radius: $global-radius;
+        box-shadow: none;
+        box-sizing: border-box;
+    }
 }

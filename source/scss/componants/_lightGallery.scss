@@ -23,11 +23,11 @@
     transition: opacity 0.35s ease;
     background: #fff;
 }
-#lg-outer .lg-slide{
+#lg-outer .lg-slide {
     position: relative;
 }
 /*lightGallery starting effects*/
-#lg-gallery.opacity {
+ #lg-gallery.opacity {
     opacity: 1;
     transition: opacity 1s ease 0s;
     -moz-transition: opacity 1s ease 0s;
@@ -48,9 +48,8 @@
 }
 /*lightGallery starting effects*/
 
-
 /*lightGallery core*/
-#lg-gallery {
+ #lg-gallery {
     height: 100%;
     opacity: 0;
     width: 100%;
@@ -62,7 +61,7 @@
     -ms-transition: opacity 1s ease 0s;
 }
 /**/
-#lg-slider {
+ #lg-slider {
     height: 100%;
     left: 0;
     top: 0;
@@ -71,7 +70,7 @@
     white-space: nowrap;
 }
 /**/
-#lg-slider .lg-slide {
+ #lg-slider .lg-slide {
     // background: url(../img/loading.gif) no-repeat scroll center center transparent;
     display: inline-block;
     height: 100%;
@@ -105,7 +104,7 @@
     z-index: 9;
 }
 #lg-slider .lg-slide:before {
-    content: "";
+    content:"";
     display: inline-block;
     height: 50%;
     width: 1px;
@@ -118,7 +117,7 @@
     // -webkit-transform: scale3d(1, 1, 1);
     // -o-transform: scale3d(1, 1, 1);
 }
-.lg-slide .object{
+.lg-slide .object {
     // transform: scale3d(0.5, 0.5, 0.5);
     // -moz-transform: scale3d(0.5, 0.5, 0.5);
     // -ms-transform: scale3d(0.5, 0.5, 0.5);
@@ -240,49 +239,49 @@
     -ms-transition: -ms-transform 1s cubic-bezier(0, 0, 0.25, 1) 0s;
     transition: transform 1s cubic-bezier(0, 0, 0.25, 1) 0s;
 }
- @-webkit-keyframes rightEnd {
- 0% {
-left: 0;
-}
- 50% {
-left: -30px;
-}
- 100% {
-left: 0;
-}
+@-webkit-keyframes rightEnd {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: -30px;
+    }
+    100% {
+        left: 0;
+    }
 }
 @keyframes rightEnd {
- 0% {
-left: 0;
-}
- 50% {
-left: -30px;
-}
- 100% {
-left: 0;
-}
+    0% {
+        left: 0;
+    }
+    50% {
+        left: -30px;
+    }
+    100% {
+        left: 0;
+    }
 }
 @-webkit-keyframes leftEnd {
- 0% {
-left: 0;
-}
- 50% {
-left: 30px;
-}
- 100% {
-left: 0;
-}
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: 0;
+    }
 }
 @keyframes leftEnd {
- 0% {
-left: 0;
-}
- 50% {
-left: 30px;
-}
- 100% {
-left: 0;
-}
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 30px;
+    }
+    100% {
+        left: 0;
+    }
 }
 .lg-slide .object.right-end {
     -webkit-animation: rightEnd 0.3s;
@@ -296,9 +295,8 @@ left: 0;
 }
 /*lightGallery core*/
 
-
 /*action*/
-#lg-action {
+ #lg-action {
     bottom: 20px;
     position: fixed;
     left: 15%;
@@ -309,7 +307,6 @@ left: 0;
 #lg-action.has-thumb {
     margin-left: -46px;
 }
-
 #lg-action a {
     margin: 0 3px 0 0 !important;
     -webkit-border-radius: 2px;
@@ -323,15 +320,14 @@ left: 0;
     display: inline-block !important;
     display: inline-block;
     vertical-align: middle;
- *display: inline;
- *zoom: 1;
+    *display: inline;
+    *zoom: 1;
     font-size: 16px;
     width: 28px;
     height: 28px;
     color: #FFF;
     cursor: pointer;
 }
-
 #lg-action a#lg-prev:before, #lg-action a#lg-next:after {
     left: 5px;
     bottom: 3px;
@@ -339,7 +335,7 @@ left: 0;
 }
 #lg-action a#lg-prev:before {
     width: 25px;
-    content: " ";
+    content:" ";
     background-image: url(http://localhost:8888/specht/wp-content/uploads/2015/07/left.png);
     position: absolute;
     height: 36px;
@@ -347,15 +343,15 @@ left: 0;
 }
 #lg-action a#lg-next:after {
     width: 25px;
-    content: " ";
+    content:" ";
     background-image: url(http://localhost:8888/specht/wp-content/uploads/2015/07/right.png);
     position: absolute;
     height: 35px;
     background-size: 25px;
 }
 #lg-action a.cl-thumb:after {
-    font-family: 'Slide-icons';
-    content: "\e01c";
+    font-family:'Slide-icons';
+    content:"\e01c";
     left: 6px;
     bottom: 4px;
     font-size: 16px;
@@ -363,11 +359,8 @@ left: 0;
 }
 /*action*/
 
-
-
-
 /*lightGallery Close*/
-#lg-close {
+ #lg-close {
     color: #FFFFFF;
     height: 28px;
     position: absolute;
@@ -385,7 +378,7 @@ left: 0;
 }
 #lg-close:after {
     width: 25px;
-    content: " ";
+    content:" ";
     background-image: url(http://localhost:8888/specht/wp-content/uploads/2015/07/x.png);
     position: absolute;
     height: 25px;
@@ -394,7 +387,6 @@ left: 0;
 #lg-close:hover {
     text-decoration: none;
 }
-
 #lightGallery li {
     cursor: pointer;
 }
